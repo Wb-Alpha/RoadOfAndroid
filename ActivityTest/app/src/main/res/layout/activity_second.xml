@@ -16,4 +16,13 @@
         android:layout_height="wrap_content"
         android:text="Button 2"/>
 
+    <Button
+        android:text="返回参数给上一个活动"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_return"
+        android:layout_below="@+id/button_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

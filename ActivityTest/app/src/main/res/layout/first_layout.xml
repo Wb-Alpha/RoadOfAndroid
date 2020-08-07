@@ -18,8 +18,32 @@
         android:id="@+id/button_back" />
 
     <Button
-        android:text="NEXT"
+        android:text="Ex Intent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_intent" />
+
+    <Button
+        android:text="Im Intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_imintent" />
+
+    <Button
+        android:text="打开百度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_web" />
+
+    <Button
+        android:text="一键拨打120"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_tel" />
+
+    <Button
+        android:text="传送参数给下一个活动"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_sendpara" />
 </LinearLayout>
