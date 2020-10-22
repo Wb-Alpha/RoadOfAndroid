@@ -1,8 +1,6 @@
 package com.example.chapter4;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
