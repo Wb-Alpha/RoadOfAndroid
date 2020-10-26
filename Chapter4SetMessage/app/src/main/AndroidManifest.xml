@@ -19,5 +19,6 @@
             </intent-filter>
         </activity>
     </application>
-
+    <permission android:name="android.permission.SEND_SMS"/>
+    <permission android:name="android.permission.READ_PHONE_STATE"/>
 </manifest>
