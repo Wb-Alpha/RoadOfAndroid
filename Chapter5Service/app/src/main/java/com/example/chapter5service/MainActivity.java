@@ -8,39 +8,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
-
-    Intent intent;
-    Button btn_play, btn_stop;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_play = findViewById(R.id.btn_play);
-        btn_play.setOnClickListener(this);
+        Button btn_play_audio = findViewById(R.id.btn_audio_play);
+        btn_play_audio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, AudioTest.class);
+                startActivity(intent);
+            }
+        });
 
-        btn_stop = findViewById(R.id.btn_stop);
-        btn_stop.setOnClickListener(this);
+        Button btn_play_audio_b = findViewById(R.id.btn_audio_play_b);
+        btn_play_audio_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, AudioTest1.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v){
-        Intent intent  = new Intent(this, AudioService.class);
-        int id = v.getId();
-        switch (id){
-            case R.id.btn_play:
-                startService(intent);
-                Toast.makeText(this, "音乐服务进行中", Toast.LENGTH_LONG);
-                btn_stop.setEnabled(true);
-                btn_play.setEnabled(false);
-                break;
-
-            case R.id.btn_stop:
-                stopService(intent);
-                btn_stop.setEnabled(false);
-                btn_play.setEnabled(true);
-        }
-    }
 }

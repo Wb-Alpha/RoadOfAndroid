@@ -9,6 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".MusicPlayService" android:process=":remote">
+            <intent-filter>
+                <action android:name="com.example.services.MusicService"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".AudioTest1" />
+
+        <service android:name=".AudioService1">
+            <intent-filter>
+                <action android:name="com.wust.wzx.MUSIC_PLAY_SERVICE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +32,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".AudioService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
