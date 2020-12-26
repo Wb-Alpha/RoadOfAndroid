@@ -1,0 +1,4 @@
+include ':example5-42'
+include ':app:example5-4'
+include ':app'
+rootProject.name = "Chatper5Auto"
